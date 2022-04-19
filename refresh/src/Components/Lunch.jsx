@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+  Link
+} from "react-router-dom";
 
 const Lunch = () => {
     return (
@@ -22,8 +25,8 @@ const Lunch = () => {
                 <div class="content">
                 <span class="author">Andrew Makris</span>
                 <h1 class="title"><a href="#">Lunch: The Middle Meal</a></h1>
-                <p class="text"></p>
-                <a href="#" class="button">See more</a>
+                <p class="text">School lunch is critical to student health and well-being, especially for low-income students—and ensures that students have nutrition they need throughout the day to learn.</p>
+                <Link to='/Breakfast'><a href="">Click To See More</a></Link>
                 </div>
             </div>
             </div>

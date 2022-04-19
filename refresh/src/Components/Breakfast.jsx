@@ -25,7 +25,7 @@ const card = () => {
                 <div class="content">
                 <span class="author">Andrew Makris</span>
                 <h1 class="title"><a href="#">Breakfast: Most important Meal of the day</a></h1>
-                <p class="text"></p>
+                <p class="text">Breakfast is often called 'the most important meal of the day', and for good reason. As the name suggests, breakfast breaks the overnight fasting period. It replenishes your supply of glucose to boost your energy levels and alertness.</p>
                 <Link to='/Breakfast'><a href="">Click To See More</a></Link>
                 </div>
             </div>

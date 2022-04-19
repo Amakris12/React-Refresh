@@ -555,6 +555,8 @@ textarea {
   margin-right: auto;
   display: flex;
   justify-content: space-around;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  padding: 20px;
 }
 .about-background .about-mission .mission {
   width: 50%;
@@ -581,6 +583,8 @@ textarea {
   margin-right: auto;
   display: flex;
   justify-content: space-around;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  padding: 20px;
 }
 .about-background .about-goals .goal {
   width: 50%;

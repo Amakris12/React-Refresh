@@ -9,7 +9,7 @@ const Home = () => {
             <h1>Andrew's High Protein Meals</h1>
             <hr />
             <div className="card-container">
-                 <Breakfast/>
+                <Breakfast/>
                 <Lunch/>
                 <Dinner/>
             </div>

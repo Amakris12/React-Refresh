@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+  Link
+} from "react-router-dom";
 
 const Dinner = () => {
     return (
@@ -22,8 +25,8 @@ const Dinner = () => {
                 <div class="content">
                 <span class="author">Andrew Makris</span>
                 <h1 class="title"><a href="#">Dinner: Finish The Day Right</a></h1>
-                <p class="text"></p>
-                <a href="#" class="button">Read more</a>
+                <p class="text">Having a healthy dinner is linked to good sleep, good choices at breakfast and lunch, lower inflammation, greater resilience to stress, better digestion, stable blood sugar and lower anxiety</p>
+                <Link to='/Breakfast'><a href="">Click To See More</a></Link>
                 </div>
             </div>
             </div>
