@@ -1,4 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
@@ -183,7 +185,7 @@ input[type=button] {
 /* lightest grey - used for outlines */
 /* Other Colors used */
 body {
-  background-color: rgb(206, 206, 206);
+  background-color: rgb(186, 186, 186);
 }
 
 .flex {
@@ -214,9 +216,400 @@ body {
   margin-right: auto;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-.home-container .food-links {
+.home-container .card-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#contact {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px "Oswald", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+  margin-bottom: 3rem;
+}
+
+/* Left contact page */
+.form-horizontal {
+  /*float: left;*/
+  max-width: 400px;
+  font-family: "Lato";
+  font-weight: 400;
+}
+
+.form-control,
+textarea {
+  width: 25rem;
+  max-width: 400px;
+  background-color: rgb(29, 29, 29);
+  color: #fff;
+  border: 1px solid white;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  padding: 5px;
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.alt-send-button {
+  width: 400px;
+  height: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px "Lato", sans-serif;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -21px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: rgb(0, 0, 0);
+}
+
+.contact-text {
+  font: 300 18px "Lato", sans-serif;
+  letter-spacing: 1.9px;
+  color: rgb(0, 0, 0);
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27, 27, 27);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px "Oswald", sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .direct-contact-container,
+.form-horizontal {
+    margin: 0 auto;
+  }
+
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }
+
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 569px) {
+  .direct-contact-container,
+.form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .form-control,
+textarea {
+    margin: 0 auto;
+  }
+
+  .name,
+.email,
+textarea {
+    width: 280px;
+  }
+
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }
+
+  .social-media-list {
+    left: 0;
+  }
+
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+}
+.BF-Meals h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+.BF-Meals hr {
+  border-top: 1px solid black;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Breakfast-Container {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Fast-card {
+  width: 30rem;
+  height: 66rem;
+  padding: 20px;
+  margin-top: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.Fast-card img {
+  width: 90%;
+  height: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.Fast-card h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.Fast-card hr {
+  width: 100%;
+  margin-left: none;
+  margin-right: none;
+}
+
+.about-background {
+  height: 65rem;
+  width: 100%;
+}
+.about-background .about-content {
+  position: relative;
+  top: 7rem;
+}
+.about-background .title-about {
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+}
+.about-background .description-about {
+  text-align: center;
+  color: white;
+}
+.about-background .line {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: blue;
+}
+.about-background .about-mission {
+  position: relative;
+  top: 10rem;
+  width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.about-background .about-mission .mission {
+  width: 50%;
+}
+.about-background .about-mission .mission .title-mission {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+.about-background .about-mission .mission .description-mission {
+  text-align: center;
+  color: white;
+}
+.about-background .about-mission .img-about {
+  width: 25rem;
+  height: 18rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.about-background .about-goals {
+  position: relative;
+  top: 12rem;
+  width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.about-background .about-goals .goal {
+  width: 50%;
+}
+.about-background .about-goals .goal .title-goal {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+.about-background .about-goals .goal .description-goal {
+  text-align: center;
+  color: white;
+}
+.about-background .about-goals .img-goal {
+  width: 25rem;
+  height: 18rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.about-background .vid-holder {
+  max-height: 20rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 8rem;
+}
+.about-background .vid-holder .video {
+  height: 20rem;
+  width: 30rem;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 * {
@@ -239,7 +632,6 @@ body {
 
 #nav_bar ul > li > a {
   color: white;
-  display: block;
   text-decoration: none;
   font-weight: bold;
   padding-left: 10px;
@@ -257,11 +649,11 @@ body {
 }
 
 #nav_bar ul li a:hover {
-  background: #8e262a;
+  font-size: 1.5rem;
 }
 
 #nav_bar a:active {
-  background: white;
+  color: black;
 }
 
 #nav_bar ul li:hover ul {
@@ -289,6 +681,10 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
@@ -370,105 +766,82 @@ h1 {
   transform: translateY(-60px);
 }
 
-.Breakfast-1 .wrapper {
-  background: url(https://www.deliciousmagazine.co.uk/wp-content/uploads/2018/11/cooked-brekfast.jpg) 20% 1%/cover no-repeat;
+.breakfast .wrapper {
+  background: url(https://www.deliciousmagazine.co.uk/wp-content/uploads/2018/11/cooked-brekfast.jpg) center/cover no-repeat;
 }
-.Breakfast-1 .date {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #77d7b9;
+.breakfast .wrapper:hover .menu-content span {
+  transform: translate(-50%, -10px);
+  opacity: 1;
+}
+.breakfast .header {
   color: #fff;
-  padding: 0.8em;
+  padding: 1em;
 }
-.Breakfast-1 .date span {
-  display: block;
-  text-align: center;
+.breakfast .header::before, .breakfast .header::after {
+  content: "";
+  display: table;
 }
-.Breakfast-1 .date .day {
-  font-weight: 700;
-  font-size: 24px;
-  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18);
+.breakfast .header::after {
+  clear: both;
 }
-.Breakfast-1 .date .month {
-  text-transform: uppercase;
-}
-.Breakfast-1 .date .month,
-.Breakfast-1 .date .year {
+.breakfast .header .date {
+  float: left;
   font-size: 12px;
 }
-.Breakfast-1 .content {
-  background-color: #fff;
-  box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+.breakfast .menu-content {
+  float: right;
 }
-.Breakfast-1 .title a {
-  color: gray;
-}
-.Breakfast-1 .menu-button {
-  position: absolute;
-  z-index: 999;
-  top: 16px;
-  right: 16px;
-  width: 25px;
-  text-align: center;
-  cursor: pointer;
-}
-.Breakfast-1 .menu-button span {
-  width: 5px;
-  height: 5px;
-  background-color: gray;
-  color: gray;
+.breakfast .menu-content li {
+  margin: 0 5px;
   position: relative;
-  display: inline-block;
-  border-radius: 50%;
 }
-.Breakfast-1 .menu-button span::after, .Breakfast-1 .menu-button span::before {
-  content: "";
+.breakfast .menu-content span {
+  transition: all 0.3s;
+  opacity: 0;
+}
+.breakfast .data {
+  color: #fff;
+  transform: translateY(calc(70px + 4em));
+}
+.breakfast .title {
+  font-size: 2rem;
+}
+.breakfast .title a {
+  color: #fff;
+}
+.breakfast .button {
   display: block;
-  width: 5px;
-  height: 5px;
-  background-color: currentColor;
-  position: absolute;
-  border-radius: 50%;
-}
-.Breakfast-1 .menu-button span::before {
-  left: -10px;
-}
-.Breakfast-1 .menu-button span::after {
-  right: -10px;
-}
-.Breakfast-1 .menu-content {
+  width: 100px;
+  margin: 2em auto 1em;
   text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  transition: transform 0.3s;
-  transform: translateY(0);
-}
-.Breakfast-1 .menu-content li {
-  width: 33.333333%;
-  float: left;
-  background-color: #77d7b9;
-  height: 60px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1;
   position: relative;
+  font-weight: 700;
 }
-.Breakfast-1 .menu-content a {
+.breakfast .button::after {
+  content: "→";
+  opacity: 0;
   position: absolute;
+  right: 0;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
 }
-.Breakfast-1 .menu-content span {
-  top: -10px;
+.breakfast .button:hover::after {
+  transform: translate(5px, -50%);
+  opacity: 1;
 }
 
 * {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
@@ -550,105 +923,82 @@ h1 {
   transform: translateY(-60px);
 }
 
-.Dinner-1 .wrapper {
-  background: url(https://www.acouplecooks.com/wp-content/uploads/2021/03/Cheese-Tortellini-011.jpg) 20% 1%/cover no-repeat;
+.dinner .wrapper {
+  background: url(https://www.acouplecooks.com/wp-content/uploads/2021/03/Cheese-Tortellini-011.jpg) center/cover no-repeat;
 }
-.Dinner-1 .date {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #77d7b9;
+.dinner .wrapper:hover .menu-content span {
+  transform: translate(-50%, -10px);
+  opacity: 1;
+}
+.dinner .header {
   color: #fff;
-  padding: 0.8em;
+  padding: 1em;
 }
-.Dinner-1 .date span {
-  display: block;
-  text-align: center;
+.dinner .header::before, .dinner .header::after {
+  content: "";
+  display: table;
 }
-.Dinner-1 .date .day {
-  font-weight: 700;
-  font-size: 24px;
-  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18);
+.dinner .header::after {
+  clear: both;
 }
-.Dinner-1 .date .month {
-  text-transform: uppercase;
-}
-.Dinner-1 .date .month,
-.Dinner-1 .date .year {
+.dinner .header .date {
+  float: left;
   font-size: 12px;
 }
-.Dinner-1 .content {
-  background-color: #fff;
-  box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+.dinner .menu-content {
+  float: right;
 }
-.Dinner-1 .title a {
-  color: gray;
-}
-.Dinner-1 .menu-button {
-  position: absolute;
-  z-index: 999;
-  top: 16px;
-  right: 16px;
-  width: 25px;
-  text-align: center;
-  cursor: pointer;
-}
-.Dinner-1 .menu-button span {
-  width: 5px;
-  height: 5px;
-  background-color: gray;
-  color: gray;
+.dinner .menu-content li {
+  margin: 0 5px;
   position: relative;
-  display: inline-block;
-  border-radius: 50%;
 }
-.Dinner-1 .menu-button span::after, .Dinner-1 .menu-button span::before {
-  content: "";
+.dinner .menu-content span {
+  transition: all 0.3s;
+  opacity: 0;
+}
+.dinner .data {
+  color: #fff;
+  transform: translateY(calc(70px + 4em));
+}
+.dinner .title {
+  font-size: 2rem;
+}
+.dinner .title a {
+  color: #fff;
+}
+.dinner .button {
   display: block;
-  width: 5px;
-  height: 5px;
-  background-color: currentColor;
-  position: absolute;
-  border-radius: 50%;
-}
-.Dinner-1 .menu-button span::before {
-  left: -10px;
-}
-.Dinner-1 .menu-button span::after {
-  right: -10px;
-}
-.Dinner-1 .menu-content {
+  width: 100px;
+  margin: 2em auto 1em;
   text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  transition: transform 0.3s;
-  transform: translateY(0);
-}
-.Dinner-1 .menu-content li {
-  width: 33.333333%;
-  float: left;
-  background-color: #77d7b9;
-  height: 60px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1;
   position: relative;
+  font-weight: 700;
 }
-.Dinner-1 .menu-content a {
+.dinner .button::after {
+  content: "→";
+  opacity: 0;
   position: absolute;
+  right: 0;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
 }
-.Dinner-1 .menu-content span {
-  top: -10px;
+.dinner .button:hover::after {
+  transform: translate(5px, -50%);
+  opacity: 1;
 }
 
 * {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
@@ -730,97 +1080,174 @@ h1 {
   transform: translateY(-60px);
 }
 
-.Lunch-1 .wrapper {
-  background: url(https://158lqg3dv1p427q2k01bdwkr-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4057_ediBOL_FOOD_138-5.jpg) 20% 1%/cover no-repeat;
+.lunch .wrapper {
+  background-color: hsla(0deg, 0%, 0%, 0.7);
+  background: url(https://simply-delicious-food.com/wp-content/uploads/2018/07/mexican-lunch-bowls-3.jpg) center/cover no-repeat;
 }
-.Lunch-1 .date {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #77d7b9;
+.lunch .wrapper:hover .menu-content span {
+  transform: translate(-50%, -10px);
+  opacity: 1;
+}
+.lunch .header {
   color: #fff;
-  padding: 0.8em;
+  padding: 1em;
 }
-.Lunch-1 .date span {
-  display: block;
-  text-align: center;
+.lunch .header::before, .lunch .header::after {
+  content: "";
+  display: table;
 }
-.Lunch-1 .date .day {
-  font-weight: 700;
-  font-size: 24px;
-  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18);
+.lunch .header::after {
+  clear: both;
 }
-.Lunch-1 .date .month {
-  text-transform: uppercase;
-}
-.Lunch-1 .date .month,
-.Lunch-1 .date .year {
+.lunch .header .date {
+  float: left;
   font-size: 12px;
 }
-.Lunch-1 .content {
-  background-color: #fff;
-  box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+.lunch .menu-content {
+  float: right;
 }
-.Lunch-1 .title a {
-  color: gray;
-}
-.Lunch-1 .menu-button {
-  position: absolute;
-  z-index: 999;
-  top: 16px;
-  right: 16px;
-  width: 25px;
-  text-align: center;
-  cursor: pointer;
-}
-.Lunch-1 .menu-button span {
-  width: 5px;
-  height: 5px;
-  background-color: gray;
-  color: gray;
+.lunch .menu-content li {
+  margin: 0 5px;
   position: relative;
-  display: inline-block;
-  border-radius: 50%;
 }
-.Lunch-1 .menu-button span::after, .Lunch-1 .menu-button span::before {
-  content: "";
+.lunch .menu-content span {
+  transition: all 0.3s;
+  opacity: 0;
+}
+.lunch .data {
+  color: #fff;
+  transform: translateY(calc(70px + 4em));
+}
+.lunch .title {
+  font-size: 2rem;
+}
+.lunch .title a {
+  color: #fff;
+}
+.lunch .button {
   display: block;
-  width: 5px;
-  height: 5px;
-  background-color: currentColor;
-  position: absolute;
-  border-radius: 50%;
-}
-.Lunch-1 .menu-button span::before {
-  left: -10px;
-}
-.Lunch-1 .menu-button span::after {
-  right: -10px;
-}
-.Lunch-1 .menu-content {
+  width: 100px;
+  margin: 2em auto 1em;
   text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  transition: transform 0.3s;
-  transform: translateY(0);
-}
-.Lunch-1 .menu-content li {
-  width: 33.333333%;
-  float: left;
-  background-color: #77d7b9;
-  height: 60px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1;
   position: relative;
+  font-weight: 700;
 }
-.Lunch-1 .menu-content a {
+.lunch .button::after {
+  content: "→";
+  opacity: 0;
   position: absolute;
+  right: 0;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
 }
-.Lunch-1 .menu-content span {
-  top: -10px;
+.lunch .button:hover::after {
+  transform: translate(5px, -50%);
+  opacity: 1;
+}
+
+.footer {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  width: 100%;
+  height: 12rem;
+  background-color: rgb(25, 25, 25);
+  border-top: 1px solid white;
+  margin-top: 2rem;
+}
+
+.footerHolder {
+  margin-left: 0rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.FootCon {
+  color: white;
+  font-size: 1rem;
+  font-family: Batman;
+  text-align: center;
+}
+
+.FootCon1 {
+  color: white;
+  font-size: 1rem;
+  font-family: Batman;
+  text-align: center;
+  border-bottom: solid white 2px;
+  margin-bottom: 0.5rem;
+}
+
+.FootSoc {
+  font-size: 1rem;
+  font-family: Batman;
+  color: white;
+  text-align: center;
+}
+
+.FootSocial1 {
+  font-size: 1rem;
+  font-family: Batman;
+  color: white;
+  text-align: center;
+  border-bottom: solid white 2px;
+  margin-bottom: 0.5rem;
+}
+
+.FootLinks {
+  font-size: 1rem;
+  font-family: Batman;
+  text-align: center;
+  color: white;
+}
+
+.FootNav1 {
+  font-size: 1rem;
+  font-family: Batman;
+  text-align: center;
+  border-bottom: solid white 2px;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.footerIMG {
+  width: 80%;
+  height: 20rem;
+  border-radius: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.FootLinks:hover {
+  font-size: 1.3rem;
+}
+
+.FootSoc:hover {
+  font-size: 1.3rem;
+}
+
+.FootCon:hover {
+  font-size: 1.2rem;
+}
+
+.FootLinks:active {
+  color: yellow;
+}
+
+.FootSoc:active {
+  color: yellow;
+}
+
+.FootCon:active {
+  color: yellow;
+}
+
+.linky {
+  color: white;
 }/*# sourceMappingURL=index.css.map */

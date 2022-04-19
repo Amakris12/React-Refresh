@@ -2,34 +2,31 @@ import React from 'react'
 
 const Lunch = () => {
     return (
-        <div>
-            <div className="row">
-            <div className="Lunch-1 card">
-                <div className="wrapper">
-                <div className="date">
-                    <span className="day">16</span>
-                    <span className="month">Apr</span>
-                    <span className="year">2022</span>
+        <div class="lunch card">
+            <div class="wrapper">
+            <div class="header">
+                <div class="date">
+                <span class="day">12</span>
+                <span class="month">Aug</span>
+                <span class="year">2016</span>
                 </div>
-                <div className="data">
-                    <div className="content">
-                    <span className="author">Andrew Makris</span>
-                    <h2 className="title"><a href="#">Lunch: Get your Macros In</a></h2>
-                    <p className="text">Eating lunch raises your blood sugar level in the middle of the day, which gives you the energy you need for the rest of the day. It also enables you to focus and concentrate on the rest of the afternoon.</p>
-                    <label for="show-menu" className="menu-button"><span></span></label>
-                    </div>
-                    <input type="checkbox" id="show-menu" />
-                    <ul className="menu-content">
-                    <li>
-                        <a href="#" className="fa fa-bookmark-o"></a>
-                    </li>
-                    <li><a href="#" className="fa fa-heart-o"><span>47</span></a></li>
-                    <li><a href="#" className="fa fa-comment-o"><span>8</span></a></li>
-                    </ul>
-                </div>
+                <ul class="menu-content">
+                <li>
+                    <a href="#" class="fa fa-bookmark-o"></a>
+                </li>
+                <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+                <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+                </ul>
+            </div>
+            <div class="data">
+                <div class="content">
+                <span class="author">Andrew Makris</span>
+                <h1 class="title"><a href="#">Lunch: The Middle Meal</a></h1>
+                <p class="text"></p>
+                <a href="#" class="button">See more</a>
                 </div>
             </div>
-        </div>
+            </div>
         </div>
     )
 }

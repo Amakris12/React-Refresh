@@ -1,20 +1,23 @@
 import React from 'react'
+import {
+  Link
+} from "react-router-dom";
 
 const navbar = () => {
     return (
            <div id="nav_bar">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Meals</a>                                      
+                    <li><Link to='/'>Home</Link></li>
+                    <li><a href="">Meals</a>                                      
                 <ul>
-                    <li><a href="survival.html">Breakfast</a></li>
-                    <li><a href="pure-pvp.html">Lunch</a></li>
-                    <li><a href="gamesworld.html">Dinner</a></li>
+                    <li><Link to='/Breakfast'>Breakfast</Link></li>
+                    <li><Link to='/Lunch'>Lunch</Link></li>
+                    <li><Link to='/Dinner'>Dinner</Link></li>
                 </ul>
                     </li>                                  
-                    <li><a href="rules.html">About</a></li>
-                    <li><a href="vote.html">Weekly Meal</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><Link to='/About'>About</Link></li>
+                    <li><Link to='/Contact'>Contact</Link></li>
+                    <li><Link to='/Weekly'>Weekly Meal</Link></li>
                 </ul>
             </div>
     )
